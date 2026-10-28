@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Nest | Sign Up</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="login.css" />
+    <style>
+      .signup-shell {
+        min-height: calc(100vh - 82px);
+        display: grid;
+        place-items: center;
+        padding: 40px 20px;
+        background: linear-gradient(180deg, #f4f8ff 0%, #edf6ff 100%);
+      }
+
+      .signup-card {
+        width: min(560px, 100%);
+        background: rgba(255, 255, 255, 0.94);
+        border: 1px solid rgba(15, 23, 42, 0.05);
+        border-radius: 32px;
+        box-shadow: var(--shadow-card, 0 18px 44px rgba(17, 24, 39, 0.1));
+        padding: 34px 28px;
+      }
+
+      .signup-card h1 {
+        margin: 0 0 10px;
+        color: var(--navy-900, #0c2340);
+        font-size: clamp(2rem, 4vw, 2.8rem);
+        letter-spacing: -0.05em;
+      }
+
+      .signup-card p {
+        color: var(--text-500, #64748b);
+        margin: 0 0 26px;
+      }
+
+      .signup-card .btn-primary {
+        width: 100%;
+        margin-top: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar">
+        <div class="nav-container container">
+          <a href="index.html" class="brand" aria-label="Home Nest Home">
+            <span class="brand-mark">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M10.8 20v-6h2.4v6h5.1V12h2.6L12 3.5 3.1 12h2.6v8h5.1Z"/>
+              </svg>
+            </span>
+            <span class="brand-copy">
+              <span class="brand-name">Home Nest</span>
+              <span class="brand-tag">Find Your Perfect Space</span>
+            </span>
+          </a>
+
+          <ul class="nav-menu">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="index.html#properties" class="nav-link">Properties</a></li>
+            <li><a href="index.html#about" class="nav-link">About</a></li>
+            <li><a href="index.html#services" class="nav-link">Services</a></li>
+            <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+          </ul>
+
+          <div class="nav-actions">
+            <button type="button" class="favorites-trigger" aria-label="View favorites">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 21.35 10.55 20C5.4 15.36 2 12.28 2 8.5A4.5 4.5 0 0 1 6.5 4c1.74 0 3.41.81 4.5 2.09A6.09 6.09 0 0 1 15.5 4 4.5 4.5 0 0 1 20 8.5c0 3.78-3.4 6.86-8.55 11.5L12 21.35Z"/>
+              </svg>
+            </button>
+            <a href="login.html" class="btn btn-light">Login</a>
+            <a href="signup.html" class="btn btn-primary nav-login active">Sign Up</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="signup-shell">
+      <section class="signup-card" aria-labelledby="signup-title">
+        <h1 id="signup-title">Create Your Account</h1>
+        <p>Register to save favorite properties, schedule visits, and manage your dream home search.</p>
+
+        <form id="signupForm" novalidate>
+          <div class="field-group">
+            <label for="signupName">Full Name</label>
+            <input id="signupName" type="text" placeholder="Enter your full name" />
+          </div>
+          <div class="field-group">
+            <label for="signupEmail">Email or Mobile Number</label>
+            <input id="signupEmail" type="text" placeholder="Enter your email or mobile number" />
+          </div>
+          <div class="field-group password-group">
+            <label for="signupPassword">Password</label>
+            <div class="password-field">
+              <input id="signupPassword" type="password" placeholder="Create a password" />
+              <button type="button" class="password-toggle" aria-label="Show password" data-toggle-password="signupPassword">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 5c5.4 0 9.9 3.9 11.3 7-1.4 3.1-5.9 7-11.3 7S2.1 15.1.7 12C2.1 8.9 6.6 5 12 5Zm0 2.1A4.9 4.9 0 1 0 12 16.9 4.9 4.9 0 0 0 12 7.1Zm0 2.1A2.8 2.8 0 1 1 12 14.7a2.8 2.8 0 0 1 0-5.5Z"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <button type="button" class="btn btn-primary">Create Account</button>
+        </form>
+
+        <p class="signup-prompt">
+          Already have an account?
+          <a href="login.html" class="text-link accent-link">Login</a>
+        </p>
+      </section>
+    </main>
+
+    <script src="login.js"></script>
+  </body>
+</html>

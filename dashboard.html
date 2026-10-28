@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Nest | Dashboard</title>
+    <meta
+      name="description"
+      content="Home Nest dashboard overview with bookings, favorites, messages, and account insights."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+  <body>
+    <div class="dashboard-shell">
+      <aside class="dashboard-sidebar">
+        <div class="sidebar-inner">
+          <div class="brand-block">
+            <div class="brand-mark">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M10.8 20v-6h2.4v6h5.1V12h2.6L12 3.5 3.1 12h2.6v8h5.1Z"/>
+              </svg>
+            </div>
+            <div class="brand-copy">
+              <span class="brand-name">Home Nest</span>
+              <span class="brand-tag">Find Your Perfect Space</span>
+            </div>
+          </div>
+
+          <nav class="sidebar-nav" aria-label="Sidebar navigation">
+            <a href="dashboard.html" class="nav-item active" data-page="dashboard">
+              <span class="nav-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2 3 10v10h6v-6h6v6h6V10l-9-6.8Zm0 2.4 7 5.3V18h-4v-6H9v6H5v-7.1l7-5.3Z"/></svg>
+              </span>
+              <span>Home</span>
+            </a>
+            <a href="my-bookings.html" class="nav-item" data-page="my-bookings">
+              <span class="nav-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a2 2 0 0 1 2 2v16l-7-3-7 3V4a2 2 0 0 1 2-2Zm0 2v11.2l5-2.15 5 2.15V4H7Zm2 3h6v2H9V7Zm0 4h6v2H9v-2Z"/></svg>
+              </span>
+              <span>My Bookings</span>
+            </a>
+            <a href="favorites.html" class="nav-item" data-page="favorites">
+              <span class="nav-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35 10.55 20C5.4 15.36 2 12.28 2 8.5A4.5 4.5 0 0 1 6.5 4c1.74 0 3.41.81 4.5 2.09A6.09 6.09 0 0 1 15.5 4 4.5 4.5 0 0 1 20 8.5c0 3.78-3.4 6.86-8.55 11.5L12 21.35Z"/></svg>
+              </span>
+              <span>Favorites</span>
+            </a>
+            <a href="profile.html" class="nav-item" data-page="profile">
+              <span class="nav-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Zm0 2c-4.42 0-8 2.24-8 5v1h16v-1c0-2.76-3.58-5-8-5Zm9-9h-2v2h-2v2h2v2h2V8h2V6h-2V4ZM4 8h2v2H4V8Z"/></svg>
+              </span>
+              <span>Profile</span>
+            </a>
+            <a href="messages.html" class="nav-item" data-page="messages">
+              <span class="nav-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"/></svg>
+              </span>
+              <span>Messages</span>
+            </a>
+            <a href="settings.html" class="nav-item" data-page="settings">
+              <span class="nav-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.14 12.94c.04-.31.06-.63.06-.94s-.02-.63-.06-.94l2.03-1.58a.5.5 0 0 0 .12-.64l-1.92-3.32a.5.5 0 0 0-.61-.18l-2.39.96a6.86 6.86 0 0 0-1.63-.94L14.53 2.5a.5.5 0 0 0-.5-.5h-3.86a.5.5 0 0 0-.5.5l-.38 2.5c-.57.23-1.1.56-1.63.94l-2.39-.96a.5.5 0 0 0-.61.18L2.73 9.85a.5.5 0 0 0 .12.64l2.03 1.58c-.04.31-.06.63-.06.94s.02.63.06.94L2.85 14.53a.5.5 0 0 0-.12.64l1.92 3.32a.5.5 0 0 0 .61.18l2.39-.96c.53.38 1.06.71 1.63.94l.38 2.5a.5.5 0 0 0 .5.5h3.86a.5.5 0 0 0 .5-.5l.38-2.5c.57-.23 1.1-.56 1.63-.94l2.39.96a.5.5 0 0 0 .61-.18l1.92-3.32a.5.5 0 0 0-.12-.64l-2.03-1.58ZM12 15.25A3.25 3.25 0 1 1 12 8.75a3.25 3.25 0 0 1 0 6.5Z"/></svg>
+              </span>
+              <span>Settings</span>
+            </a>
+          </nav>
+        </div>
+      </aside>
+
+      <main class="dashboard-content">
+        <header class="topbar">
+          <div class="page-title">
+            <h1>Welcome back, Ada</h1>
+            <p>Here is a quick overview of your property journey and saved homes.</p>
+          </div>
+          <div class="topbar-actions">
+            <button type="button" class="icon-button" aria-label="Favorite homes">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35 10.55 20C5.4 15.36 2 12.28 2 8.5A4.5 4.5 0 0 1 6.5 4c1.74 0 3.41.81 4.5 2.09A6.09 6.09 0 0 1 15.5 4 4.5 4.5 0 0 1 20 8.5c0 3.78-3.4 6.86-8.55 11.5L12 21.35Z"/></svg>
+            </button>
+            <div class="user-avatar" aria-label="Current user">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=300&q=80" alt="Ada avatar" />
+            </div>
+          </div>
+        </header>
+
+        <section class="dashboard-section">
+          <div class="stat-grid">
+            <div class="stat-card">
+              <span class="stat-label">Upcoming stays</span>
+              <span class="stat-value">03</span>
+              <div class="stat-meta">2 new confirmations</div>
+            </div>
+            <div class="stat-card">
+              <span class="stat-label">Saved homes</span>
+              <span class="stat-value" id="dashboardFavoriteCount">0</span>
+              <div class="stat-meta">Curated for you</div>
+            </div>
+            <div class="stat-card">
+              <span class="stat-label">Unread messages</span>
+              <span class="stat-value">08</span>
+              <div class="stat-meta">4 from managers</div>
+            </div>
+            <div class="stat-card">
+              <span class="stat-label">Profile status</span>
+              <span class="stat-value" style="font-size:1.2rem;">Premium</span>
+              <div class="stat-meta">Best pricing tier</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="dashboard-section">
+          <div class="section-header">
+            <div>
+              <h2>Upcoming bookings</h2>
+              <p>Your near-term property plans.</p>
+            </div>
+            <a href="my-bookings.html" class="primary-btn">View bookings</a>
+          </div>
+          <div class="card-grid" id="dashboardUpcomingList"></div>
+        </section>
+
+        <section class="dashboard-section">
+          <div class="section-header">
+            <div>
+              <h2>Favorite properties</h2>
+              <p>Saved homes you are actively considering.</p>
+            </div>
+            <a href="favorites.html" class="secondary-btn">Open favorites</a>
+          </div>
+          <div class="card-grid" id="dashboardFavoriteList"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="dashboard.js"></script>
+    <script>
+      const dashboardUpcomingList = document.getElementById('dashboardUpcomingList');
+      const dashboardFavoriteList = document.getElementById('dashboardFavoriteList');
+      const dashboardFavoriteCount = document.getElementById('dashboardFavoriteCount');
+
+      const upcomingBookingData = [
+        {
+          name: 'Skyline Heights',
+          location: 'Bangalore, Karnataka',
+          date: '12 Aug 2026',
+          badge: 'Confirmed'
+        },
+        {
+          name: 'Royal Crest Villa',
+          location: 'Whitefield, Bangalore',
+          date: '21 Aug 2026',
+          badge: 'Tour scheduled'
+        },
+        {
+          name: 'Emerald Court',
+          location: 'Indiranagar, Bangalore',
+          date: '02 Sep 2026',
+          badge: 'Reviewing'
+        }
+      ];
+
+      function renderDashboardUpcoming() {
+        dashboardUpcomingList.innerHTML = upcomingBookingData.map((booking) => `
+          <div class="property-card">
+            <div class="property-image-wrap">
+              <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80" alt="${booking.name}" />
+              <span class="favorite-tag">${booking.badge}</span>
+            </div>
+            <div class="property-content">
+              <div class="property-meta">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 1 7 7c0 5.25-7 13-7 13S5 14.25 5 9a7 7 0 0 1 7-7Zm0 9.5A2.5 2.5 0 1 0 12 6a2.5 2.5 0 0 0 0 5.5Z"/></svg>
+                <span>${booking.location}</span>
+              </div>
+              <h3 class="property-name">${booking.name}</h3>
+              <div class="property-footer">
+                <span class="property-price">${booking.date}</span>
+                <a href="my-bookings.html" class="view-details-btn">Details</a>
+              </div>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      function renderDashboardFavorites() {
+        const favoriteProperties = getFavoriteProperties();
+        dashboardFavoriteCount.textContent = favoriteProperties.length;
+
+        if (!favoriteProperties.length) {
+          dashboardFavoriteList.innerHTML = '<div class="empty-state">No favorite properties yet. Explore the site and save homes you love.</div>';
+          return;
+        }
+
+        dashboardFavoriteList.innerHTML = favoriteProperties.slice(0, 3).map((property) => `
+          <div class="property-card">
+            <div class="property-image-wrap">
+              <img src="${property.image}" alt="${property.name}" />
+              <span class="favorite-tag">${property.type}</span>
+            </div>
+            <div class="property-content">
+              <div class="property-meta">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 1 7 7c0 5.25-7 13-7 13S5 14.25 5 9a7 7 0 0 1 7-7Zm0 9.5A2.5 2.5 0 1 0 12 6a2.5 2.5 0 0 0 0 5.5Z"/></svg>
+                <span>${property.location}</span>
+              </div>
+              <h3 class="property-name">${property.name}</h3>
+              <div class="property-footer">
+                <span class="property-price">${property.priceLabel}</span>
+                <a href="favorites.html" class="view-details-btn">Open</a>
+              </div>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        ensureDashboardAccess();
+        initSidebarState();
+        renderDashboardUpcoming();
+        renderDashboardFavorites();
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Nest | Luxury 3 BHK Villa</title>
+    <meta
+      name="description"
+      content="Luxury 3 BHK Villa in Whitefield, Bangalore. Explore details, amenities, location, and property manager information."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="property-details">
+    <header class="site-header">
+      <nav class="navbar">
+        <div class="nav-container container">
+          <a href="index.html#home" class="brand" aria-label="Home Nest home">
+            <span class="brand-mark">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M10.8 20v-6h2.4v6h5.1V12h2.6L12 3.5 3.1 12h2.6v8h5.1Z"/>
+              </svg>
+            </span>
+            <span class="brand-copy">
+              <span class="brand-name">Home Nest</span>
+              <span class="brand-tag">Find Your Perfect Space</span>
+            </span>
+          </a>
+
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html#home" class="nav-link active">Home</a></li>
+            <li><a href="index.html#properties" class="nav-link">Properties</a></li>
+            <li><a href="index.html#about" class="nav-link">About</a></li>
+            <li><a href="index.html#services" class="nav-link">Services</a></li>
+            <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+          </ul>
+
+          <div class="nav-actions">
+            <button type="button" class="favorites-trigger" id="favoritesToggle" aria-label="Show favorites">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 21.35 10.55 20C5.4 15.36 2 12.28 2 8.5A4.5 4.5 0 0 1 6.5 4c1.74 0 3.41.81 4.5 2.09A6.09 6.09 0 0 1 15.5 4 4.5 4.5 0 0 1 20 8.5c0 3.78-3.4 6.86-8.55 11.5L12 21.35Z"/>
+              </svg>
+              <span class="fav-count" id="favCount">0</span>
+            </button>
+            <button type="button" class="btn btn-light btn-login" data-modal="authModal">Login</button>
+            <button type="button" class="btn btn-primary btn-signup" data-modal="authModal">Sign Up</button>
+          </div>
+
+          <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="property-details-page">
+      <section class="property-detail-hero">
+        <div class="container property-detail-layout">
+          <div class="gallery-panel">
+            <div class="main-image-wrap">
+              <img id="propertyMainImage" src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80" alt="Luxury villa exterior" />
+            </div>
+            <div class="thumbnail-row" id="propertyThumbs" aria-label="Property gallery thumbnails"></div>
+          </div>
+
+          <aside class="property-summary">
+            <div class="summary-header">
+              <span class="status-badge sale">For Rent</span>
+              <h1 id="pagePropertyTitle">Luxury 3 BHK Villa</h1>
+            </div>
+
+            <div class="location-row">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 1 7 7c0 5.25-7 13-7 13S5 14.25 5 9a7 7 0 0 1 7-7Zm0 9.5A2.5 2.5 0 1 0 12 6a2.5 2.5 0 0 0 0 5.5Z"/></svg>
+              <span>Whitefield, Bangalore</span>
+            </div>
+
+            <div class="meta-grid">
+              <div class="meta-item">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5V20a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1v-8.5Zm9-8.5 9 7.5-1.1 1.1L12 6.8 4.1 11.1 3 9.9 12 3Z"/></svg>
+                <div>
+                  <span>Type</span>
+                  <strong>Villa</strong>
+                </div>
+              </div>
+              <div class="meta-item">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h16v10H4V8Zm2-2h12v2H6V6Zm2 6h2v2H8v-2Zm6 0h2v2h-2v-2Z"/></svg>
+                <div>
+                  <span>Bedrooms</span>
+                  <strong>3 Beds</strong>
+                </div>
+              </div>
+              <div class="meta-item">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10V7a5 5 0 0 1 10 0v3h1a2 2 0 0 1 2 2v7H4v-7a2 2 0 0 1 2-2h1Zm2 0h6V7a3 3 0 0 0-6 0v3Z"/></svg>
+                <div>
+                  <span>Bathrooms</span>
+                  <strong>3 Baths</strong>
+                </div>
+              </div>
+              <div class="meta-item">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4V4Zm2 2v12h12V6H6Zm2 2h8v2H8V8Zm0 4h8v2H8v-2Z"/></svg>
+                <div>
+                  <span>Area</span>
+                  <strong>2,400 sqft</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="price-row">
+              <span class="price-label">Monthly Rent</span>
+              <div class="price" id="detailPrice">₹25,000/month</div>
+            </div>
+
+            <div class="action-row">
+              <button type="button" class="btn btn-primary" id="bookNowBtn">Book Now</button>
+              <button type="button" class="btn btn-light btn-outline-dark" id="scheduleVisitBtn">Schedule &amp; Visit</button>
+            </div>
+
+            <div class="amenities-panel">
+              <h3>Amenities</h3>
+              <div class="amenities-grid compact-grid">
+                <div class="amenity-item"><span>🏡</span> Furnished</div>
+                <div class="amenity-item"><span>🏊</span> Swimming Pool</div>
+                <div class="amenity-item"><span>⚡</span> Power Backup</div>
+                <div class="amenity-item"><span>🔒</span> Gated Community</div>
+                <div class="amenity-item"><span>🛡️</span> 24/7 Security</div>
+                <div class="amenity-item"><span>🚗</span> Car Parking</div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="property-lower container">
+        <div class="details-content">
+          <div class="tabs" role="tablist" aria-label="Property info tabs">
+            <button type="button" class="details-tab active" data-tab="overview" role="tab" aria-selected="true">Overview</button>
+            <button type="button" class="details-tab" data-tab="location" role="tab" aria-selected="false">Location</button>
+            <button type="button" class="details-tab" data-tab="amenities" role="tab" aria-selected="false">Amenities</button>
+            <button type="button" class="details-tab" data-tab="reviews" role="tab" aria-selected="false">Reviews</button>
+          </div>
+
+          <div class="tab-panel" id="tabOverview">
+            <p>
+              Properties built for people to live in, including single-family homes, apartments,
+              townhouses, and condominiums. Properties serving public or specific community needs,
+              such as schools, hospitals, places of worship, and government buildings.
+            </p>
+
+            <div class="features-block">
+              <h3>Key Features</h3>
+              <ul class="feature-list">
+                <li>Spacious living &amp; dining area</li>
+                <li>Modular kitchen</li>
+                <li>Private garden</li>
+                <li>High speed internet</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tab-panel" id="tabLocation" hidden>
+            <div class="map-panel">
+              <div class="map-pin">📍</div>
+              <div class="map-meta">
+                <h3>Whitefield, Bangalore</h3>
+                <p>A vibrant residential neighborhood known for premium villas, modern apartments, and excellent connectivity to tech parks and lifestyle hubs.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-panel" id="tabAmenities" hidden>
+            <div class="amenities-grid full-grid">
+              <div class="amenity-item"><span>🛋️</span> Furnished interiors</div>
+              <div class="amenity-item"><span>🏊</span> Swimming pool</div>
+              <div class="amenity-item"><span>⚡</span> Power backup</div>
+              <div class="amenity-item"><span>🔐</span> Gated community</div>
+              <div class="amenity-item"><span>🛡️</span> 24/7 security</div>
+              <div class="amenity-item"><span>🚗</span> Car parking</div>
+              <div class="amenity-item"><span>🍽️</span> Modular kitchen</div>
+              <div class="amenity-item"><span>🌿</span> Private garden</div>
+              <div class="amenity-item"><span>📶</span> High-speed internet</div>
+            </div>
+          </div>
+
+          <div class="tab-panel" id="tabReviews" hidden>
+            <div class="reviews-list">
+              <article class="review-item">
+                <div class="review-head">
+                  <strong>Priya N.</strong>
+                  <span class="stars">★★★★★</span>
+                </div>
+                <p>“Beautiful villa with a premium feel and excellent amenities. The layout is thoughtfully designed and the community is peaceful.”</p>
+              </article>
+              <article class="review-item">
+                <div class="review-head">
+                  <strong>Rahul K.</strong>
+                  <span class="stars">★★★★☆</span>
+                </div>
+                <p>“The home feels spacious and the location is great for families. It’s a very comfortable place to live and work from home.”</p>
+              </article>
+            </div>
+
+            <form id="reviewForm" class="review-form" novalidate>
+              <h3>Write a Review</h3>
+              <label>
+                <span>Your Name</span>
+                <input type="text" name="reviewName" placeholder="Enter your name" required />
+              </label>
+              <label>
+                <span>Your Review</span>
+                <textarea name="reviewText" rows="4" placeholder="Share your experience" required></textarea>
+              </label>
+              <button type="submit" class="btn btn-primary">Submit Review</button>
+              <div class="demo-message" id="reviewSuccess" hidden></div>
+            </form>
+          </div>
+        </div>
+
+        <aside class="sidebar">
+          <div class="info-card location-card">
+            <div class="map-thumb" aria-label="Map preview for Whitefield, Bangalore">
+              <div class="map-pin-mini">📍</div>
+            </div>
+            <div class="card-copy">
+              <span class="card-label">Location</span>
+              <h3>Whitefield, Bangalore</h3>
+            </div>
+          </div>
+
+          <div class="info-card listed-card">
+            <h3>Listed by</h3>
+            <div class="manager-row">
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80" alt="Property manager Riya Sharma" />
+              <div>
+                <strong>Riya Sharma</strong>
+                <span>Property Manager</span>
+              </div>
+            </div>
+            <button type="button" class="btn btn-outline-dark" id="contactManagerBtn">Contact</button>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="brand footer-brand">
+          <span class="brand-mark">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M10.8 20v-6h2.4v6h5.1V12h2.6L12 3.5 3.1 12h2.6v8h5.1Z"/>
+            </svg>
+          </span>
+          <span class="brand-copy">
+            <span class="brand-name">Home Nest</span>
+            <span class="brand-tag">Find Your Perfect Space</span>
+          </span>
+        </div>
+
+        <p>© <span id="currentYear"></span> Home Nest. All rights reserved.</p>
+        <a href="index.html#home" class="back-to-top">Back to Top</a>
+      </div>
+    </footer>
+
+    <div class="modal-backdrop hidden" id="authModal" aria-hidden="true">
+      <div class="modal-card auth-card" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+        <button type="button" class="close-modal" data-close="authModal" aria-label="Close login dialog">×</button>
+        <div class="auth-header">
+          <h3 id="authTitle">Welcome</h3>
+          <p>Frontend demo only — this does not connect to a real backend.</p>
+        </div>
+
+        <div class="auth-tabs" role="tablist" aria-label="Authentication tabs">
+          <button type="button" class="auth-tab active" data-auth-tab="login" role="tab" aria-selected="true">Login</button>
+          <button type="button" class="auth-tab" data-auth-tab="signup" role="tab" aria-selected="false">Sign Up</button>
+        </div>
+
+        <form id="loginForm" class="auth-form active" novalidate>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" placeholder="you@example.com" required />
+          </label>
+          <label>
+            <span>Password</span>
+            <input type="password" name="password" placeholder="Enter your password" required />
+          </label>
+          <button type="submit" class="btn btn-primary auth-submit">Login</button>
+        </form>
+
+        <form id="signupForm" class="auth-form" novalidate>
+          <label>
+            <span>Full Name</span>
+            <input type="text" name="name" placeholder="Your full name" required />
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" placeholder="you@example.com" required />
+          </label>
+          <label>
+            <span>Password</span>
+            <input type="password" name="password" placeholder="Create a password" required minlength="6" />
+          </label>
+          <button type="submit" class="btn btn-primary auth-submit">Create Account</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="modal-backdrop hidden" id="bookingModal" aria-hidden="true">
+      <div class="modal-card slim-modal" role="dialog" aria-modal="true">
+        <button type="button" class="close-modal" data-close="bookingModal" aria-label="Close booking dialog">×</button>
+        <h3>Book Property</h3>
+        <form id="bookingForm" class="dialog-form" novalidate>
+          <label>
+            <span>Name</span>
+            <input type="text" name="bookingName" required />
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="bookingEmail" required />
+          </label>
+          <button type="submit" class="btn btn-primary">Confirm Booking</button>
+          <div class="demo-message" id="bookingSuccess" hidden></div>
+        </form>
+      </div>
+    </div>
+
+    <div class="modal-backdrop hidden" id="visitModal" aria-hidden="true">
+      <div class="modal-card slim-modal" role="dialog" aria-modal="true">
+        <button type="button" class="close-modal" data-close="visitModal" aria-label="Close schedule dialog">×</button>
+        <h3>Schedule a Visit</h3>
+        <form id="visitForm" class="dialog-form" novalidate>
+          <label>
+            <span>Visit Date</span>
+            <input type="date" name="visitDate" required />
+          </label>
+          <label>
+            <span>Visit Time</span>
+            <input type="time" name="visitTime" required />
+          </label>
+          <label>
+            <span>Visitor Name</span>
+            <input type="text" name="visitorName" required />
+          </label>
+          <label>
+            <span>Phone</span>
+            <input type="tel" name="visitorPhone" required />
+          </label>
+          <button type="submit" class="btn btn-primary">Confirm Visit</button>
+          <div class="demo-message" id="visitSuccess" hidden></div>
+        </form>
+      </div>
+    </div>
+
+    <div class="modal-backdrop hidden" id="contactModal" aria-hidden="true">
+      <div class="modal-card slim-modal" role="dialog" aria-modal="true">
+        <button type="button" class="close-modal" data-close="contactModal" aria-label="Close contact dialog">×</button>
+        <h3>Contact Property Manager</h3>
+        <form id="contactForm" class="dialog-form" novalidate>
+          <label>
+            <span>Name</span>
+            <input type="text" name="contactName" required />
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="contactEmail" required />
+          </label>
+          <label>
+            <span>Message</span>
+            <textarea name="contactMessage" rows="3" placeholder="Hi Riya, I would like to know more about this property." required></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+          <div class="demo-message" id="contactSuccess" hidden></div>
+        </form>
+      </div>
+    </div>
+
+    <div class="modal-backdrop hidden" id="imagePreviewModal" aria-hidden="true">
+      <div class="modal-card image-preview-card" role="dialog" aria-modal="true">
+        <button type="button" class="close-modal" data-close="imagePreviewModal" aria-label="Close image preview">×</button>
+        <img id="previewImage" src="" alt="Property preview" />
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

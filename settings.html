@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Nest | Settings</title>
+    <meta name="description" content="Manage your Home Nest account preferences and security settings." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+  <body>
+    <div class="dashboard-shell">
+      <aside class="dashboard-sidebar">
+        <div class="sidebar-inner">
+          <div class="brand-block">
+            <div class="brand-mark">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.8 20v-6h2.4v6h5.1V12h2.6L12 3.5 3.1 12h2.6v8h5.1Z"/></svg>
+            </div>
+            <div class="brand-copy">
+              <span class="brand-name">Home Nest</span>
+              <span class="brand-tag">Find Your Perfect Space</span>
+            </div>
+          </div>
+
+          <nav class="sidebar-nav" aria-label="Sidebar navigation">
+            <a href="dashboard.html" class="nav-item" data-page="dashboard"><span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2 3 10v10h6v-6h6v6h6V10l-9-6.8Zm0 2.4 7 5.3V18h-4v-6H9v6H5v-7.1l7-5.3Z"/></svg></span><span>Home</span></a>
+            <a href="my-bookings.html" class="nav-item" data-page="my-bookings"><span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a2 2 0 0 1 2 2v16l-7-3-7 3V4a2 2 0 0 1 2-2Zm0 2v11.2l5-2.15 5 2.15V4H7Zm2 3h6v2H9V7Zm0 4h6v2H9v-2Z"/></svg></span><span>My Bookings</span></a>
+            <a href="favorites.html" class="nav-item" data-page="favorites"><span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35 10.55 20C5.4 15.36 2 12.28 2 8.5A4.5 4.5 0 0 1 6.5 4c1.74 0 3.41.81 4.5 2.09A6.09 6.09 0 0 1 15.5 4 4.5 4.5 0 0 1 20 8.5c0 3.78-3.4 6.86-8.55 11.5L12 21.35Z"/></svg></span><span>Favorites</span></a>
+            <a href="profile.html" class="nav-item" data-page="profile"><span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Zm0 2c-4.42 0-8 2.24-8 5v1h16v-1c0-2.76-3.58-5-8-5Zm9-9h-2v2h-2v2h2v2h2V8h2V6h-2V4ZM4 8h2v2H4V8Z"/></svg></span><span>Profile</span></a>
+            <a href="messages.html" class="nav-item" data-page="messages"><span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"/></svg></span><span>Messages</span></a>
+            <a href="settings.html" class="nav-item active" data-page="settings"><span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.14 12.94c.04-.31.06-.63.06-.94s-.02-.63-.06-.94l2.03-1.58a.5.5 0 0 0 .12-.64l-1.92-3.32a.5.5 0 0 0-.61-.18l-2.39.96a6.86 6.86 0 0 0-1.63-.94L14.53 2.5a.5.5 0 0 0-.5-.5h-3.86a.5.5 0 0 0-.5.5l-.38 2.5c-.57.23-1.1.56-1.63.94l-2.39-.96a.5.5 0 0 0-.61.18L2.73 9.85a.5.5 0 0 0 .12.64l2.03 1.58c-.04.31-.06.63-.06.94s.02.63.06.94L2.85 14.53a.5.5 0 0 0-.12.64l1.92 3.32a.5.5 0 0 0 .61.18l2.39-.96c.53.38 1.06.71 1.63.94l.38 2.5a.5.5 0 0 0 .5.5h3.86a.5.5 0 0 0 .5-.5l.38-2.5c.57-.23 1.1-.56 1.63-.94l2.39.96a.5.5 0 0 0 .61-.18l1.92-3.32a.5.5 0 0 0-.12-.64l-2.03-1.58ZM12 15.25A3.25 3.25 0 1 1 12 8.75a3.25 3.25 0 0 1 0 6.5Z"/></svg></span><span>Settings</span></a>
+          </nav>
+        </div>
+      </aside>
+
+      <main class="dashboard-content">
+        <header class="topbar">
+          <div class="page-title">
+            <h1>Settings</h1>
+            <p>Customize your notifications and account preferences.</p>
+          </div>
+          <div class="topbar-actions">
+            <button class="icon-button" type="button" aria-label="Favorites"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35 10.55 20C5.4 15.36 2 12.28 2 8.5A4.5 4.5 0 0 1 6.5 4c1.74 0 3.41.81 4.5 2.09A6.09 6.09 0 0 1 15.5 4 4.5 4.5 0 0 1 20 8.5c0 3.78-3.4 6.86-8.55 11.5L12 21.35Z"/></svg></button>
+            <div class="user-avatar"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=300&q=80" alt="User profile" /></div>
+          </div>
+        </header>
+
+        <section class="settings-shell">
+          <div class="settings-grid">
+            <article class="settings-card">
+              <h3>Notifications</h3>
+              <div class="settings-list">
+                <div class="setting-row">
+                  <label for="bookingUpdates">Booking status updates</label>
+                  <button class="toggle active" type="button" id="bookingUpdates" aria-label="Toggle booking updates"></button>
+                </div>
+                <div class="setting-row">
+                  <label for="propertyRecommendations">Property recommendations</label>
+                  <button class="toggle active" type="button" id="propertyRecommendations" aria-label="Toggle property recommendations"></button>
+                </div>
+                <div class="setting-row">
+                  <label for="messageNotifications">Message notifications</label>
+                  <button class="toggle active" type="button" id="messageNotifications" aria-label="Toggle message notifications"></button>
+                </div>
+                <div class="setting-row">
+                  <label for="promotionalOffers">Promotional offers</label>
+                  <button class="toggle" type="button" id="promotionalOffers" aria-label="Toggle promotional offers"></button>
+                </div>
+              </div>
+            </article>
+
+            <article class="settings-card">
+              <h3>Language & Currency</h3>
+              <div class="settings-list">
+                <div class="field">
+                  <label for="languageSelect">Preferred language</label>
+                  <select id="languageSelect">
+                    <option value="English">English</option>
+                    <option value="Hindi">Hindi</option>
+                    <option value="Kannada">Kannada</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="currencySelect">Currency</label>
+                  <select id="currencySelect">
+                    <option value="INR">Indian Rupee (INR)</option>
+                    <option value="USD">US Dollar (USD)</option>
+                    <option value="EUR">Euro (EUR)</option>
+                  </select>
+                </div>
+              </div>
+            </article>
+
+            <article class="settings-card">
+              <h3>Security</h3>
+              <div class="password-form">
+                <div class="password-field">
+                  <input type="password" id="currentPassword" placeholder="Current password" />
+                  <button class="password-toggle" type="button" data-toggle-password="currentPassword" aria-label="Show password"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5c5.52 0 10 7 10 7s-4.48 7-10 7S2 12 2 12s4.48-7 10-7Zm0 2.2A4.8 4.8 0 1 0 12 17.2 4.8 4.8 0 0 0 12 7.2Zm0 2.1A2.7 2.7 0 1 1 12 14.7a2.7 2.7 0 0 1 0-5.4Z"/></svg></button>
+                </div>
+                <div class="password-field">
+                  <input type="password" id="newPassword" placeholder="New password" />
+                  <button class="password-toggle" type="button" data-toggle-password="newPassword" aria-label="Show password"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5c5.52 0 10 7 10 7s-4.48 7-10 7S2 12 2 12s4.48-7 10-7Zm0 2.2A4.8 4.8 0 1 0 12 17.2 4.8 4.8 0 0 0 12 7.2Zm0 2.1A2.7 2.7 0 1 1 12 14.7a2.7 2.7 0 0 1 0-5.4Z"/></svg></button>
+                </div>
+                <div class="password-field">
+                  <input type="password" id="confirmPassword" placeholder="Confirm password" />
+                  <button class="password-toggle" type="button" data-toggle-password="confirmPassword" aria-label="Show password"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5c5.52 0 10 7 10 7s-4.48 7-10 7S2 12 2 12s4.48-7 10-7Zm0 2.2A4.8 4.8 0 1 0 12 17.2 4.8 4.8 0 0 0 12 7.2Zm0 2.1A2.7 2.7 0 1 1 12 14.7a2.7 2.7 0 0 1 0-5.4Z"/></svg></button>
+                </div>
+                <button type="button" class="primary-btn" id="updatePasswordBtn">Update Password</button>
+              </div>
+            </article>
+
+            <article class="settings-card">
+              <h3>Account Actions</h3>
+              <div class="settings-list">
+                <button type="button" class="secondary-btn" id="logoutBtn">Sign Out</button>
+                <button type="button" class="destructive-btn" id="deleteAccountBtn">Delete Account</button>
+                <p class="demo-note">This is a front-end demo. Changes are stored locally in your browser for demonstration purposes.</p>
+              </div>
+            </article>
+          </div>
+          <div id="settingsStatus" class="status-message" aria-live="polite"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="dashboard.js"></script>
+    <script>
+      const settingsStatus = document.getElementById('settingsStatus');
+
+      function showSettingsStatus(message, type) {
+        settingsStatus.textContent = message;
+        settingsStatus.classList.add('visible', type === 'success' ? 'success' : 'error');
+      }
+
+      function loadSettings() {
+        const settings = getSettingsData();
+        document.getElementById('languageSelect').value = settings.language || 'English';
+        document.getElementById('currencySelect').value = settings.currency || 'INR';
+
+        Object.entries(settings.notifications || {}).forEach(([key, value]) => {
+          const button = document.getElementById(key);
+          if (button) {
+            button.classList.toggle('active', Boolean(value));
+          }
+        });
+      }
+
+      document.querySelectorAll('.toggle').forEach((toggle) => {
+        toggle.addEventListener('click', () => {
+          toggle.classList.toggle('active');
+          const settings = getSettingsData();
+          settings.notifications = settings.notifications || {};
+          settings.notifications[toggle.id] = toggle.classList.contains('active');
+          saveSettingsData(settings);
+        });
+      });
+
+      document.getElementById('languageSelect').addEventListener('change', (event) => {
+        const settings = getSettingsData();
+        settings.language = event.target.value;
+        saveSettingsData(settings);
+      });
+
+      document.getElementById('currencySelect').addEventListener('change', (event) => {
+        const settings = getSettingsData();
+        settings.currency = event.target.value;
+        saveSettingsData(settings);
+      });
+
+      document.getElementById('updatePasswordBtn').addEventListener('click', () => {
+        const current = document.getElementById('currentPassword').value.trim();
+        const next = document.getElementById('newPassword').value.trim();
+        const confirm = document.getElementById('confirmPassword').value.trim();
+
+        if (!current || !next || !confirm) {
+          showSettingsStatus('Please complete all password fields.', 'error');
+          return;
+        }
+
+        if (next.length < 8) {
+          showSettingsStatus('New password must be at least 8 characters long.', 'error');
+          return;
+        }
+
+        if (next !== confirm) {
+          showSettingsStatus('New password and confirm password must match.', 'error');
+          return;
+        }
+
+        showSettingsStatus('Password updated successfully.', 'success');
+        document.getElementById('currentPassword').value = '';
+        document.getElementById('newPassword').value = '';
+        document.getElementById('confirmPassword').value = '';
+      });
+
+      document.getElementById('logoutBtn').addEventListener('click', () => {
+        logoutDashboardSession();
+      });
+
+      document.getElementById('deleteAccountBtn').addEventListener('click', () => {
+        const confirmed = window.confirm('This action is only a demo. Do you want to continue?');
+        if (confirmed) {
+          showSettingsStatus('Demo account deletion started. This is a non-destructive UI example.', 'success');
+        }
+      });
+
+      document.querySelectorAll('.password-toggle').forEach((button) => {
+        button.addEventListener('click', () => {
+          const target = document.getElementById(button.dataset.togglePassword);
+          if (!target) return;
+          const shouldShow = target.type === 'password';
+          target.type = shouldShow ? 'text' : 'password';
+          button.setAttribute('aria-label', shouldShow ? 'Hide password' : 'Show password');
+        });
+      });
+
+      document.addEventListener('DOMContentLoaded', () => {
+        initSidebarState();
+        loadSettings();
+      });
+    </script>
+  </body>
+</html>

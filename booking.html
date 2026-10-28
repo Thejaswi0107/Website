@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Nest | Book Your Property</title>
+    <meta
+      name="description"
+      content="Book your ideal property with Home Nest. Select dates, add guest details, and proceed to a demo payment flow."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="booking">
+    <header class="site-header">
+      <nav class="navbar">
+        <div class="nav-container container">
+          <a href="index.html#home" class="brand" aria-label="Home Nest home">
+            <span class="brand-mark">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M10.8 20v-6h2.4v6h5.1V12h2.6L12 3.5 3.1 12h2.6v8h5.1Z"/>
+              </svg>
+            </span>
+            <span class="brand-copy">
+              <span class="brand-name">Home Nest</span>
+              <span class="brand-tag">Find Your Perfect Space</span>
+            </span>
+          </a>
+
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html#home" class="nav-link active">Home</a></li>
+            <li><a href="index.html#properties" class="nav-link">Properties</a></li>
+            <li><a href="index.html#about" class="nav-link">About</a></li>
+            <li><a href="index.html#services" class="nav-link">Services</a></li>
+            <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+          </ul>
+
+          <div class="nav-actions">
+            <button type="button" class="favorites-trigger" id="favoritesToggle" aria-label="Show favorites">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 21.35 10.55 20C5.4 15.36 2 12.28 2 8.5A4.5 4.5 0 0 1 6.5 4c1.74 0 3.41.81 4.5 2.09A6.09 6.09 0 0 1 15.5 4 4.5 4.5 0 0 1 20 8.5c0 3.78-3.4 6.86-8.55 11.5L12 21.35Z"/>
+              </svg>
+              <span class="fav-count" id="favCount">0</span>
+            </button>
+            <button type="button" class="btn btn-light btn-login" data-modal="authModal">Login</button>
+            <button type="button" class="btn btn-primary btn-signup" data-modal="authModal">Sign Up</button>
+          </div>
+
+          <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="booking-page">
+      <div class="container booking-shell">
+        <div class="booking-progress" aria-label="Booking progress">
+          <div class="progress-step active" data-step="details">
+            <span class="step-circle">1</span>
+            <span class="step-label">Booking Details</span>
+          </div>
+          <div class="progress-step" data-step="payment">
+            <span class="step-circle">2</span>
+            <span class="step-label">Payment</span>
+          </div>
+          <div class="progress-step" data-step="confirmation">
+            <span class="step-circle">3</span>
+            <span class="step-label">Confirmation</span>
+          </div>
+        </div>
+
+        <section class="booking-layout" id="bookingDetailsView">
+          <div class="booking-form-panel card-panel">
+            <h1>Book Your Property</h1>
+
+            <div class="mini-property-card" aria-label="Selected property summary">
+              <img id="bookingPropertyImage" src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80" alt="Selected villa" />
+              <div class="mini-property-copy">
+                <h2 id="bookingPropertyName">3BHK Villa</h2>
+                <p id="bookingPropertyLocation">Whitefield, Bangalore</p>
+                <div class="mini-property-stats">
+                  <span>3 Beds</span>
+                  <span>3 Baths</span>
+                  <span>2,400 sqft</span>
+                </div>
+                <strong>₹25,000/month</strong>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <h3>Select Booking Dates</h3>
+              <div class="date-grid">
+                <label class="field-wrap">
+                  <span>Check-in Date</span>
+                  <input type="date" id="checkinDate" name="checkinDate" required />
+                  <small class="error-text" id="checkinError"></small>
+                </label>
+                <label class="field-wrap">
+                  <span>Checkout Date</span>
+                  <input type="date" id="checkoutDate" name="checkoutDate" required />
+                  <small class="error-text" id="checkoutError"></small>
+                </label>
+              </div>
+              <div class="duration-pill" id="durationInfo">Duration: 1 month</div>
+            </div>
+
+            <div class="field-group">
+              <h3>Add Guest Details (Optional)</h3>
+              <div class="guest-grid">
+                <label class="field-wrap">
+                  <span>Full Name</span>
+                  <input type="text" id="guestName" name="guestName" placeholder="Enter full name" />
+                  <small class="error-text" id="guestNameError"></small>
+                </label>
+                <label class="field-wrap">
+                  <span>Phone Number</span>
+                  <input type="tel" id="guestPhone" name="guestPhone" placeholder="Enter phone number" />
+                  <small class="error-text" id="guestPhoneError"></small>
+                </label>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <h3>Special Requests</h3>
+              <label class="field-wrap textarea-wrap">
+                <span>Additional Notes</span>
+                <textarea id="specialRequests" name="specialRequests" rows="5" placeholder="Preferred visit time, furniture requirements, accessibility requests, or other property preferences."></textarea>
+              </label>
+            </div>
+          </div>
+
+          <aside class="summary-column">
+            <div class="summary-card card-panel">
+              <h3>Property Summary</h3>
+              <div class="summary-row">
+                <span>Property Type</span>
+                <strong>Villa</strong>
+              </div>
+              <div class="summary-row">
+                <span>Location</span>
+                <strong id="bookingPropertyLocationSummary">Whitefield, Bangalore</strong>
+              </div>
+              <div class="summary-row">
+                <span>Available From</span>
+                <strong id="summaryAvailableFrom">-</strong>
+              </div>
+              <div class="summary-row">
+                <span>Leave Duration</span>
+                <strong id="summaryLeaveDuration">-</strong>
+              </div>
+              <div class="summary-row">
+                <span>Security Deposit</span>
+                <strong>₹2,50,000</strong>
+              </div>
+            </div>
+
+            <div class="summary-card card-panel amount-card">
+              <h3>Total Amount</h3>
+              <div class="amount-row">
+                <span>Monthly Rent</span>
+                <strong id="monthlyRentValue">₹25,000</strong>
+              </div>
+              <div class="amount-row">
+                <span>Security Deposit</span>
+                <strong id="securityDepositValue">₹2,50,000</strong>
+              </div>
+              <div class="amount-row">
+                <span>Service Fee</span>
+                <strong id="serviceFeeValue">₹5,000</strong>
+              </div>
+              <div class="divider"></div>
+              <div class="amount-row total-row">
+                <span>Total Payable</span>
+                <strong id="totalPayableValue">₹2,80,000</strong>
+              </div>
+              <button type="button" class="btn btn-primary full-width" id="proceedPaymentBtn">Proceed to Payment →</button>
+            </div>
+          </aside>
+        </section>
+
+        <section class="payment-panel card-panel hidden" id="paymentView">
+          <div class="payment-header">
+            <h2>Payment</h2>
+            <span class="demo-badge">Demo Mode</span>
+          </div>
+
+          <div class="payment-summary-box">
+            <div>
+              <p class="muted-label">Property</p>
+              <strong id="paymentSummaryTitle">3BHK Villa</strong>
+            </div>
+            <div>
+              <p class="muted-label">Dates</p>
+              <strong id="paymentSummaryDates">-</strong>
+            </div>
+            <div>
+              <p class="muted-label">Duration</p>
+              <strong id="paymentSummaryDuration">-</strong>
+            </div>
+            <div>
+              <p class="muted-label">Amount</p>
+              <strong id="paymentSummaryTotal">₹2,80,000</strong>
+            </div>
+          </div>
+
+          <div class="payment-methods">
+            <h3>Select Payment Method</h3>
+            <label class="radio-option">
+              <input type="radio" name="paymentMethod" value="upi" checked />
+              <span>UPI</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="paymentMethod" value="card" />
+              <span>Debit/Credit Card</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="paymentMethod" value="netbanking" />
+              <span>Net Banking</span>
+            </label>
+            <small class="error-text" id="paymentMethodError"></small>
+          </div>
+
+          <div class="payment-actions">
+            <button type="button" class="btn btn-light" id="backToBookingBtn">Back</button>
+            <button type="button" class="btn btn-primary" id="payNowBtn">Pay Now</button>
+          </div>
+        </section>
+
+        <section class="confirmation-panel card-panel hidden" id="confirmationView">
+          <div class="confirmation-icon">✓</div>
+          <h2>Demo Booking Confirmed</h2>
+          <p class="confirmation-note">This is a frontend-only demo and does not process a real reservation or payment.</p>
+
+          <div class="confirmation-box">
+            <div class="confirmation-row">
+              <span>Booking Reference</span>
+              <strong id="bookingReference">HN-000000</strong>
+            </div>
+            <div class="confirmation-row">
+              <span>Property</span>
+              <strong id="confirmationSummaryTitle">3BHK Villa</strong>
+            </div>
+            <div class="confirmation-row">
+              <span>Dates</span>
+              <strong id="confirmationSummaryDates">-</strong>
+            </div>
+            <div class="confirmation-row">
+              <span>Duration</span>
+              <strong id="confirmationSummaryDuration">-</strong>
+            </div>
+            <div class="confirmation-row">
+              <span>Total Paid</span>
+              <strong id="confirmationSummaryTotal">₹2,80,000</strong>
+            </div>
+          </div>
+
+          <a href="index.html#home" class="btn btn-primary full-width" aria-label="Return to Home Nest homepage">Return to Home</a>
+        </section>
+      </div>
+    </main>
+
+    <div class="modal-backdrop hidden" id="authModal" aria-hidden="true">
+      <div class="modal-card auth-card" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+        <button type="button" class="close-modal" data-close="authModal" aria-label="Close login dialog">×</button>
+        <div class="auth-header">
+          <h3 id="authTitle">Welcome</h3>
+          <p>Frontend demo only — this does not connect to a real backend.</p>
+        </div>
+
+        <div class="auth-tabs" role="tablist" aria-label="Authentication tabs">
+          <button type="button" class="auth-tab active" data-auth-tab="login" role="tab" aria-selected="true">Login</button>
+          <button type="button" class="auth-tab" data-auth-tab="signup" role="tab" aria-selected="false">Sign Up</button>
+        </div>
+
+        <form id="loginForm" class="auth-form active" novalidate>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" placeholder="you@example.com" required />
+          </label>
+          <label>
+            <span>Password</span>
+            <input type="password" name="password" placeholder="Enter your password" required />
+          </label>
+          <button type="submit" class="btn btn-primary auth-submit">Login</button>
+        </form>
+
+        <form id="signupForm" class="auth-form" novalidate>
+          <label>
+            <span>Full Name</span>
+            <input type="text" name="name" placeholder="Your full name" required />
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" placeholder="you@example.com" required />
+          </label>
+          <label>
+            <span>Password</span>
+            <input type="password" name="password" placeholder="Create a password" required minlength="6" />
+          </label>
+          <button type="submit" class="btn btn-primary auth-submit">Create Account</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Nest | Messages</title>
+    <meta name="description" content="Manage your Home Nest conversations with property managers." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+  <body>
+    <div class="dashboard-shell">
+      <aside class="dashboard-sidebar">
+        <div class="sidebar-inner">
+          <div class="brand-block">
+            <div class="brand-mark">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.8 20v-6h2.4v6h5.1V12h2.6L12 3.5 3.1 12h2.6v8h5.1Z"/></svg>
+            </div>
+            <div class="brand-copy">
+              <span class="brand-name">Home Nest</span>
+              <span class="brand-tag">Find Your Perfect Space</span>
+            </div>
+          </div>
+
+          <nav class="sidebar-nav" aria-label="Sidebar navigation">
+            <a href="dashboard.html" class="nav-item" data-page="dashboard"><span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2 3 10v10h6v-6h6v6h6V10l-9-6.8Zm0 2.4 7 5.3V18h-4v-6H9v6H5v-7.1l7-5.3Z"/></svg></span><span>Home</span></a>
+            <a href="my-bookings.html" class="nav-item" data-page="my-bookings"><span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a2 2 0 0 1 2 2v16l-7-3-7 3V4a2 2 0 0 1 2-2Zm0 2v11.2l5-2.15 5 2.15V4H7Zm2 3h6v2H9V7Zm0 4h6v2H9v-2Z"/></svg></span><span>My Bookings</span></a>
+            <a href="favorites.html" class="nav-item" data-page="favorites"><span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35 10.55 20C5.4 15.36 2 12.28 2 8.5A4.5 4.5 0 0 1 6.5 4c1.74 0 3.41.81 4.5 2.09A6.09 6.09 0 0 1 15.5 4 4.5 4.5 0 0 1 20 8.5c0 3.78-3.4 6.86-8.55 11.5L12 21.35Z"/></svg></span><span>Favorites</span></a>
+            <a href="profile.html" class="nav-item" data-page="profile"><span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Zm0 2c-4.42 0-8 2.24-8 5v1h16v-1c0-2.76-3.58-5-8-5Zm9-9h-2v2h-2v2h2v2h2V8h2V6h-2V4ZM4 8h2v2H4V8Z"/></svg></span><span>Profile</span></a>
+            <a href="messages.html" class="nav-item active" data-page="messages"><span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"/></svg></span><span>Messages</span></a>
+            <a href="settings.html" class="nav-item" data-page="settings"><span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.14 12.94c.04-.31.06-.63.06-.94s-.02-.63-.06-.94l2.03-1.58a.5.5 0 0 0 .12-.64l-1.92-3.32a.5.5 0 0 0-.61-.18l-2.39.96a6.86 6.86 0 0 0-1.63-.94L14.53 2.5a.5.5 0 0 0-.5-.5h-3.86a.5.5 0 0 0-.5.5l-.38 2.5c-.57.23-1.1.56-1.63.94l-2.39-.96a.5.5 0 0 0-.61.18L2.73 9.85a.5.5 0 0 0 .12.64l2.03 1.58c-.04.31-.06.63-.06.94s.02.63.06.94L2.85 14.53a.5.5 0 0 0-.12.64l1.92 3.32a.5.5 0 0 0 .61.18l2.39-.96c.53.38 1.06.71 1.63.94l.38 2.5a.5.5 0 0 0 .5.5h3.86a.5.5 0 0 0 .5-.5l.38-2.5c.57-.23 1.1-.56 1.63-.94l2.39.96a.5.5 0 0 0 .61-.18l1.92-3.32a.5.5 0 0 0-.12-.64l-2.03-1.58ZM12 15.25A3.25 3.25 0 1 1 12 8.75a3.25 3.25 0 0 1 0 6.5Z"/></svg></span><span>Settings</span></a>
+          </nav>
+        </div>
+      </aside>
+
+      <main class="dashboard-content">
+        <header class="topbar">
+          <div class="page-title">
+            <h1>Messages</h1>
+            <p>Manage your conversations with property experts.</p>
+          </div>
+          <div class="topbar-actions">
+            <button class="icon-button" type="button" aria-label="Favorites"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35 10.55 20C5.4 15.36 2 12.28 2 8.5A4.5 4.5 0 0 1 6.5 4c1.74 0 3.41.81 4.5 2.09A6.09 6.09 0 0 1 15.5 4 4.5 4.5 0 0 1 20 8.5c0 3.78-3.4 6.86-8.55 11.5L12 21.35Z"/></svg></button>
+            <div class="user-avatar"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=300&q=80" alt="User profile" /></div>
+          </div>
+        </header>
+
+        <section class="messages-layout">
+          <aside class="conversation-list" id="conversationList"></aside>
+          <div class="chat-panel" id="chatPanel"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="dashboard.js"></script>
+    <script>
+      const conversationList = document.getElementById('conversationList');
+      const chatPanel = document.getElementById('chatPanel');
+      let activeConversationId = null;
+
+      function renderConversations() {
+        const conversations = getMessagesData();
+        if (!conversations.length) {
+          conversationList.innerHTML = '<div class="empty-state">No conversations yet.</div>';
+          return;
+        }
+
+        if (!activeConversationId) {
+          activeConversationId = conversations[0].id;
+        }
+
+        conversationList.innerHTML = conversations.map((conversation) => `
+          <button type="button" class="conversation-item ${conversation.id === activeConversationId ? 'active' : ''}" data-conversation-id="${conversation.id}">
+            <div class="conversation-avatar"><img src="${conversation.avatar}" alt="${conversation.name}" /></div>
+            <div class="conversation-body">
+              <div class="conversation-top">
+                <span class="conversation-name">${conversation.name}</span>
+                <span class="conversation-time">${conversation.messages[conversation.messages.length - 1]?.time || 'Now'}</span>
+              </div>
+              <div class="conversation-preview">
+                <span>${conversation.messages[conversation.messages.length - 1]?.text || 'No messages yet'}</span>
+                ${conversation.unread ? '<span class="unread-dot"></span>' : ''}
+              </div>
+            </div>
+          </button>
+        `).join('');
+
+        document.querySelectorAll('.conversation-item').forEach((button) => {
+          button.addEventListener('click', () => {
+            const selectedId = button.dataset.conversationId;
+            const conversations = getMessagesData();
+            const target = conversations.find((item) => item.id === selectedId);
+            if (target) {
+              target.unread = 0;
+              saveMessagesData(conversations);
+              activeConversationId = selectedId;
+              renderConversations();
+              renderChat();
+            }
+          });
+        });
+      }
+
+      function renderChat() {
+        const conversations = getMessagesData();
+        const activeConversation = conversations.find((item) => item.id === activeConversationId);
+
+        if (!activeConversation) {
+          chatPanel.innerHTML = '<div class="empty-state">Select a conversation to view messages.</div>';
+          return;
+        }
+
+        chatPanel.innerHTML = `
+          <div class="chat-header">
+            <div class="chat-user">
+              <div class="conversation-avatar"><img src="${activeConversation.avatar}" alt="${activeConversation.name}" /></div>
+              <div>
+                <div class="chat-user-name">${activeConversation.name}</div>
+                <div class="chat-property">${activeConversation.property}</div>
+              </div>
+            </div>
+            <button type="button" class="secondary-btn">View Property</button>
+          </div>
+          <div class="chat-body">
+            ${activeConversation.messages.map((message) => `
+              <div class="message-row ${message.sender === 'me' ? 'sent' : 'received'}">
+                <div class="message-bubble">${escapeHtml(message.text)}<div class="message-time">${message.time}</div></div>
+              </div>
+            `).join('')}
+          </div>
+          <div class="chat-composer">
+            <input id="messageInput" type="text" placeholder="Type your message..." aria-label="Type your message" />
+            <button type="button" class="primary-btn" id="sendMessageBtn">Send</button>
+          </div>
+        `;
+
+        document.getElementById('sendMessageBtn').addEventListener('click', () => {
+          const input = document.getElementById('messageInput');
+          const text = input.value.trim();
+          if (!text) return;
+
+          const conversations = getMessagesData();
+          const current = conversations.find((item) => item.id === activeConversationId);
+          if (!current) return;
+
+          current.messages.push({ sender: 'me', text, time: formatTime() });
+          saveMessagesData(conversations);
+          renderConversations();
+          renderChat();
+        });
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        initSidebarState();
+        renderConversations();
+        renderChat();
+      });
+    </script>
+  </body>
+</html>
